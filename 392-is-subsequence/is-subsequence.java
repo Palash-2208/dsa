@@ -4,11 +4,7 @@ class Solution {
         for(int i=0;i<t.length() && p < s.length();i++)
         {
             if(s.charAt(p)==t.charAt(i))
-            {
-                p++;
-            }
-         
-            
+            p++;
         }
         return p==s.length();
         
