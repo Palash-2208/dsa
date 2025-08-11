@@ -1,17 +1,28 @@
 class Solution {
     public boolean isMonotonic(int[] nums) {
-      boolean increasing = true;
-        boolean decreasing = true;
+      int a=0,d=0;
+        for (int i=0;i<nums.length-1;i++)
+        {
+            
+            
+            if(nums[i]<=nums[i+1])
+            {
+              a++;
+            }
+             if(nums[i]>=nums[i+1])
+            {
+                d++;
+            
         
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] > nums[i - 1]) {
-                decreasing = false; 
-            }
-            if (nums[i] < nums[i - 1]) {
-                increasing = false; 
-            }
         }
         
-        return increasing || decreasing;
+        }
+        if(a==nums.length-1 || d==nums.length-1)
+        {
+            return true;
+        }
+        return false;
+
+
     }
 }
